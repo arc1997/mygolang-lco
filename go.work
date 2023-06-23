@@ -1,0 +1,11 @@
+go 1.20
+
+use ./02variable
+use ./03userinput
+use ./04conversion
+use ./05mymaths
+use ./06mytime
+use ./07mypointers
+use ./08myarray
+use ./09myslices
+use ./10mymaps
