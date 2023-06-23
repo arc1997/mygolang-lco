@@ -20,7 +20,7 @@ func main() {
 	//loops are interesting in golang
 
 	for key, value := range languages {
-		//fmt.Printf("For key %v, the value is: %v\n", key, value)
+		fmt.Printf("For key %v, the value is: %v\n", key, value)
 		fmt.Println(key + ": " + value)
 	}
 }
