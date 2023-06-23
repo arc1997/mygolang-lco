@@ -1,5 +1,5 @@
 go 1.20
-
+use ./01hello
 use ./02variable
 use ./03userinput
 use ./04conversion
