@@ -9,3 +9,4 @@ use ./07mypointers
 use ./08myarray
 use ./09myslices
 use ./10mymaps
+use ./11mystructs
