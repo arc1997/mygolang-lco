@@ -11,3 +11,4 @@ use ./09myslices
 use ./10mymaps
 use ./11mystructs
 use ./12ifelse
+use ./13myswitch
