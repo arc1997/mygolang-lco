@@ -15,3 +15,4 @@ use ./13myswitch
 use ./14loops
 use ./15functions
 use ./16methods
+use ./17defer
