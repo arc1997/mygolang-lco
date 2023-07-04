@@ -15,7 +15,8 @@ type course struct {
 
 func main() {
 	fmt.Println("Welcome to json handling in go")
-	Encodejson()
+	//Encodejson()
+	Decodejson()
 }
 
 func Encodejson() {
@@ -34,4 +35,40 @@ func Encodejson() {
 	}
 
 	fmt.Println(string(jsondata))
+}
+
+func Decodejson() {
+	jsondata := []byte(`
+	{
+		"coursename": "React js",
+		"Price": 299,
+		"Platform": "LearnCode",
+		"Password": "abc123",
+		"tags": [
+				"web-dev",
+				"js"
+		]
+    }
+	`)
+
+	var lcocourse course
+
+	checkvalid := json.Valid(jsondata)
+
+	if checkvalid {
+		fmt.Println("json is valid")
+		json.Unmarshal(jsondata, &lcocourse)
+		fmt.Printf("%#v\n", lcocourse)
+	}
+
+	// some cases where you just want to add data to key value pair
+
+	var mydata map[string]interface{} // interface is used when we dont know the datatype (here we dont know datatype of value)
+
+	json.Unmarshal(jsondata, &mydata)
+	//fmt.Printf("%#v\n", mydata)
+
+	for key, value := range mydata {
+		fmt.Println(key, value)
+	}
 }
